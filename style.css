@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ced6d3;
+  background-image: url("images/2560x1600 Jiji¸𓏲࣪ ˚_.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  transition: background 1s ease;
+}
+
+body.night {
+  background-image: url("images/download (4).jpeg");
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding: 60px;
+  border-radius: 10px;
+  background: #ebe9e2;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+p,
+i {
+  font-size: 10px;
+  font-weight: 500;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.content h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #5c6461;
+}
+
+.wrapper {
+  padding: 30px 0;
+  margin-top: 15px;
+  background: rgba(240, 240, 240, 0.9);
+  box-shadow: 0 8px 32px rgba(180, 180, 180, 0.2);
+  border-radius: 10px;
+}
+
+.wrapper:hover {
+  box-shadow: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.main div {
+  width: 20%;
+  text-align: center;
+}
+
+.main .number {
+  font-size: 60px;
+  font-weight: 400;
+  color: #4e4e6e;
+}
+
+.main .colon {
+  font-size: 20px;
+  color: #4e4e6e;
+}
+
+.btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  background: #90997f;
+  box-shadow: 0 8px 32px rgba(135, 206, 235, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.laps {
+  position: relative;
+  max-height: 100px;
+  overflow-y: auto;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.laps::-webkit-scrollbar {
+  width: 5px;
+}
+
+.laps::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+.laps::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+.lap {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+.lap:last-child {
+  border-bottom: none;
+}
+
+.lap.active p {
+  color: #fff;
+}
+
+.clock,
+.stopwatch,
+.timer {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+}
+
+.hidden {
+  display: none;
+  transform: scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0;
+  }
+
+  .content h3 {
+    font-size: 18px;
+  }
+
+  .main-wrapper {
+    padding: 20px 0;
+  }
+
+  .main div {
+    width: 15%;
+  }
+
+  .main .number {
+    font-size: 50px;
+  }
+
+  .main .colon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .content h3 {
+    font-size: 14px;
+  }
+
+  .main-wrapper {
+    padding: 10px 0;
+  }
+
+  .main-wrapper .head {
+    padding: 0 20px;
+  }
+
+  .main .number {
+    font-size: 40px;
+  }
+
+  .main .colon {
+    font-size: 12px;
+  }
+}
+
+  
